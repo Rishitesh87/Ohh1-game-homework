@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Board from './containers/Board';
+import CreateGameButton from './components/CreateGameButton'
 
 class App extends Component {
   render() {
@@ -10,6 +11,7 @@ class App extends Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="title">0hh1</h1>
+          <CreateGameButton/>
           <Board/>
         </header>
 

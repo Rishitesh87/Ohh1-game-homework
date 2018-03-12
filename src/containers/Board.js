@@ -22,7 +22,8 @@ export class Board extends PureComponent {
 
   renderSquare = rowIndex => (value, index) => {
     return (
-      <Square key={index} value={value} />
+      <Square key={index} value={value} x={index}
+       y={rowIndex} />
     )
   }
 
@@ -38,11 +39,11 @@ export class Board extends PureComponent {
 // src/containers/Board.js
 
 // At the bottom of the file, where you connect your component:
-const mapStateToProps = (reduxState) => {
+const mapStateToProps = ({board}) => {
   // return an object with the prop names (keys) and prop values
   // taken from the reduxState (values)
   return {
-    board: reduxState.board
+    board,
   }
 }
 
